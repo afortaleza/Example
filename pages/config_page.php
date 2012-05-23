@@ -2,7 +2,7 @@
     <?php echo form_security_field('plugin_Example_config_update') ?>
 
     <label>Foo or Bar?<br/>
-        <input name="foo_or_bar" value="<?php echo string_attribute( $t_foo_or_bar ) ?>"/>
+        <input name="foo_or_bar" value="<?php plugin_config_get('foo_or_bar') ?>"/>
     </label>
     <br/>
     <label>
