@@ -19,13 +19,13 @@
             return array(
                 'EVENT_EXAMPLE_FOO' => EVENT_TYPE_EXECUTE,
                 'EVENT_EXAMPLE_BAR' => EVENT_TYPE_CHAIN,
-            )
+            );
         }
 
         function hooks() {
             return array(
                 'EVENT_EXAMPLE_FOO' => 'foo',
-                'EVENT_EXAMPLE_BAR' => 'bar',                
+                'EVENT_EXAMPLE_BAR' => 'bar',
             );
         }
 
@@ -33,7 +33,7 @@
         {
             echo 'In method foo(). ';
         }
-
+        
         function bar($p_event, $p_chained_param)
         {
             return str_replace('foo', 'bar', $p_chained_param);
