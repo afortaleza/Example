@@ -29,14 +29,18 @@
             );
         }
 
-        function foo($p_event)
-        {
+        function foo($p_event) {
             echo 'In method foo(). ';
         }
         
-        function bar($p_event, $p_chained_param)
-        {
+        function bar($p_event, $p_chained_param) {
             return str_replace('foo', 'bar', $p_chained_param);
+        }
+
+        function config() {
+            return array(
+                'foo_or_bar' => 'foo',
+            );
         }
     }
 ?>
