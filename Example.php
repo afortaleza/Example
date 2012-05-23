@@ -14,5 +14,29 @@
             $this->contact = 'afortaleza@hotmail.com';        # Author/team e-mail address
             $this->url = 'https://www.github.com/afortaleza';            # Support webpage
         }
+
+        function events() {
+            return array(
+                'EVENT_EXAMPLE_FOO' => EVENT_TYPE_EXECUTE,
+                'EVENT_EXAMPLE_BAR' => EVENT_TYPE_CHAIN,
+            )
+        }
+
+        function hooks() {
+            return array(
+                'EVENT_EXAMPLE_FOO' => 'foo',
+                'EVENT_EXAMPLE_BAR' => 'bar',                
+            );
+        }
+
+        function foo($p_event)
+        {
+            echo 'In method foo(). ';
+        }
+
+        function bar($p_event, $p_chained_param)
+        {
+            return str_replace('foo', 'bar', $p_chained_param);
+        }
     }
 ?>
