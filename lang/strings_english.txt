@@ -1,0 +1,5 @@
+<?php
+	$s_plugin_Example_configuration = "Configuration";
+	$s_plugin_Example_foo_or_bar = "Foo or Bar?";
+	$s_plugin_Example_reset = "Reset Value";
+?>
